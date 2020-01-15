@@ -9,34 +9,33 @@
         body {
             background: #202028;
             color: #ffffff;
-            
-        }
-        .game {
             font: 2em Arial, Helvetica, sans-serif;
             text-align: center;
-            padding-top: 5%;
+            display: flex;
         }
-        .tutorial {
-            padding-left: 20%;
-            padding-top: 10%;
-            position: absolute;
+        canvas {
+            border: solid .2em #ffffff;
+            height: 70vh;
         }
+        .player {
+            flex: 1 1 auto;
+        }
+
     </style>
 </head>
 <body>
-    <div>
-        <div class="tutorial">
-            <p>Space: Fall down</p>
-            <p>Left : Move to left</p>
-            <p>Right : Move to right</p>
-            <p>Up, Down : To rotate</p>
-        </div>
-        <div class="game">
-            <div id="score"></div>
-            <canvas id="tetris" width="240" height="400"></canvas>
-        </div>
+    <div class="player">
+        <div class="score"></div>
+        <canvas id="tetris" width="240" height="400"></canvas>
+    </div>
+    <div class="player">
+        <div class="score"></div>
+        <canvas id="tetris" width="240" height="400"></canvas>
     </div>
     <!-- js -->
+    <script src="arena.js"></script>
+    <script src="player.js"></script>
     <script src="tetris.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
